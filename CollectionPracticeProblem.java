@@ -9,6 +9,7 @@ public class CollectionPracticeProblem {
 		doStack();
 		doQueue();
 		doSet();
+		doMap();
 	}
 	
 	private static void doList() {
@@ -75,6 +76,7 @@ public class CollectionPracticeProblem {
 			Object element = itr2.next();
 	        System.out.println(element + " ");	
 		}
+		System.out.println();
 	}
 	
 	private static void doSet() {
@@ -89,6 +91,22 @@ public class CollectionPracticeProblem {
 		//Traversing Set through ForEach Loop
 		for (String str : s ) {
 			System.out.println(str);
+		}
+		System.out.println();
+	}
+	
+	private static void doMap() {
+		System.out.println("In doMap Problem");
+		//Creating Map
+		Map<Integer, String> m = new HashMap<>();
+		m.put(100, "Ritesh");
+		m.put(101, "Pawan");
+		m.put(102, "Amrit");
+		m.put(103, "Niraj");
+		
+		//Traversing Set through ForEach loop
+		for (Map.Entry m1 : m.entrySet()) {
+			System.out.println(m1.getKey()+" "+m1.getValue());
 		}
 	}
 }
