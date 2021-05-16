@@ -6,6 +6,7 @@ public class CollectionPracticeProblem {
 
 	public static void main(String[] args) {
 		doList();
+		doStack();
 	}
 	
 	private static void doList() {
@@ -24,5 +25,24 @@ public class CollectionPracticeProblem {
 	        System.out.println(element + " ");
 		}
 		System.out.println();
+	}
+	
+	private static void doStack() {
+		System.out.println("In doStack problem");
+		//Creating Stack
+		Stack<String> s = new Stack<>();
+		//Adding object to the Stack
+		s.push("Amit");
+		s.push("Rahul");
+		s.push("Ankit");
+		s.push("Saurabh");
+		String pop = s.pop();
+		
+		Iterator<String> itr = s.iterator();
+		while(itr.hasNext()) {
+			Object element = itr.next();
+	        System.out.println(element + " ");	
+		}
+		
 	}
 }
