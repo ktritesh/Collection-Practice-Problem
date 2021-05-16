@@ -8,6 +8,7 @@ public class CollectionPracticeProblem {
 		doList();
 		doStack();
 		doQueue();
+		doSet();
 	}
 	
 	private static void doList() {
@@ -74,6 +75,20 @@ public class CollectionPracticeProblem {
 			Object element = itr2.next();
 	        System.out.println(element + " ");	
 		}
+	}
+	
+	private static void doSet() {
+		System.out.println("In doSet problem");
+		//Creating Set
+		Set<String> s = new LinkedHashSet<>();
+		s.add("Amit");
+		s.add("Rahul");
+		s.add("Prashant");
+		s.add("Alpesh");
 		
+		//Traversing Set through ForEach Loop
+		for (String str : s ) {
+			System.out.println(str);
+		}
 	}
 }
