@@ -7,13 +7,14 @@ public class CollectionPracticeProblem {
 	public static void main(String[] args) {
 		doList();
 		doStack();
+		doQueue();
 	}
 	
 	private static void doList() {
 		System.out.println("In doList Problem");
 		//Creating List
 		List<String> l = new LinkedList<>();
-		//Adding object to the list
+		//Adding objects to the list
 		l.add("Ritesh");
 		l.add("KT");
 		l.add("Karan");
@@ -31,7 +32,7 @@ public class CollectionPracticeProblem {
 		System.out.println("In doStack problem");
 		//Creating Stack
 		Stack<String> s = new Stack<>();
-		//Adding object to the Stack
+		//Adding objects to the Stack
 		s.push("Amit");
 		s.push("Rahul");
 		s.push("Ankit");
@@ -41,6 +42,36 @@ public class CollectionPracticeProblem {
 		Iterator<String> itr = s.iterator();
 		while(itr.hasNext()) {
 			Object element = itr.next();
+	        System.out.println(element + " ");	
+		}
+		System.out.println();
+		
+	}
+	
+	private static void doQueue() {
+		System.out.println("In doQueue problem");
+		//Creating Queue
+		PriorityQueue<String> q = new PriorityQueue<>();
+		//Adding objects to the Queue
+		q.add("Ritesh KT");
+		q.add("Abhishek Abhinav");
+		q.add("Sumit Kr");
+		q.add("Vikash Kumar");
+		System.out.println("head: "+q.element());
+		System.out.println("head: "+q.peek());
+		System.out.println("Iterating the queue elements: ");
+		
+		Iterator<String> itr = q.iterator();
+		while(itr.hasNext()) {
+			Object element = itr.next();
+	        System.out.println(element + " ");	
+		}
+		q.remove();
+		q.poll();
+		System.out.println("After removing two elements: ");
+		Iterator<String> itr2 = q.iterator();
+		while(itr2.hasNext()) {
+			Object element = itr2.next();
 	        System.out.println(element + " ");	
 		}
 		
